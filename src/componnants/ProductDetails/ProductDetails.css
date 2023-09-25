@@ -1,0 +1,18 @@
+img{
+    width:300px;
+    height: 300px;
+    object-fit: cover;
+}
+.productsd img{
+    
+    width: 10%;
+
+}
+.details{
+  
+    height: 200%;
+    text-align: center;
+    width: 100%;
+    background-color: #efefef;
+    padding-top: 30px;
+}

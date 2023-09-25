@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import '../CatigoryProduct/CatigoryProduct.css'
 
 {/*export default function CatigoryProduct() {
     let[catProduct,setcatProduct]=useState([]);
@@ -23,7 +24,7 @@ export default function CategoryProduct() {
   
     let getProducts = async () => {
       
-        let { data } = await axios.get(`https://fakestoreapi.com/products/category/${params.name}`);
+        let { data } = await axios.get(`https://fakestoreapi.com/products/category/${params.id}`);
         console.log(data);
         setCatProduct(data); 
       
@@ -36,14 +37,17 @@ export default function CategoryProduct() {
         {/*نفس كود البرودكتس*/ }
         return (
             <div className='products container'>
-              <h2>All {params.name}</h2>
+              <h2>All {params.id}</h2>
               <div className='d-flex my-5 flex-wrap'>
                 {catProduct.map((catPr) => (
                   <div className="col-lg-4 mt-5" key={catPr.id}>
-                    <div className='product product-card'>
+                    <div className='product card'>
                       <img src={catPr.image} alt={catPr.title} className='card-img-top'/>
                       <div className="card-body">
-                        <h4 className='card-title'>{catPr.title}</h4>
+                        <div className="row">
+                        <h5 className='card-title  '>{catPr.title}</h5>
+                        </div>
+
                         <p>{catPr.price}$</p>
                       </div>
                     </div>

@@ -27,7 +27,7 @@ getCats();
           return <div className='cat' key={index}>
            { /*بدي لما اكبس ع الكات يحولني ع الكاتيجوري الخاص بالاشي لهيك حط الكات جوات لينك */ }
           {/*الي جوا التو اي اسم لكن الكات هي متغير لهيك حطيتها بهالشكل*/}
-           <Link className='btn btn-primary' to={`catigory/${cat}`}>{cat}</Link> 
+           <Link className='btn btn-secondary' to={`catigory/${cat}`}>{cat}</Link> 
           </div>
         }) }
     </div>
